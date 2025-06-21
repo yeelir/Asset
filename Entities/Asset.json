@@ -1,0 +1,106 @@
+{
+  "name": "Asset",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Asset name"
+    },
+    "asset_id": {
+      "type": "string",
+      "description": "Unique asset identifier"
+    },
+    "make": {
+      "type": "string",
+      "description": "Manufacturer or brand"
+    },
+    "model": {
+      "type": "string",
+      "description": "Model number or name"
+    },
+    "serial_number": {
+      "type": "string",
+      "description": "Serial number"
+    },
+    "is_composite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Is this a composite asset containing other assets?"
+    },
+    "parent_asset_id": {
+      "type": "string",
+      "description": "If part of a composite, this is the ID of the parent asset."
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Reference to category"
+    },
+    "location_id": {
+      "type": "string",
+      "description": "Reference to location"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "checked_out",
+        "in_repair",
+        "maintenance",
+        "retired",
+        "installed"
+      ],
+      "default": "available",
+      "description": "Current asset status"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of purchase"
+    },
+    "purchase_price": {
+      "type": "number",
+      "description": "Purchase price in dollars"
+    },
+    "supplier": {
+      "type": "string",
+      "description": "Supplier or vendor name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Asset description"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of image URLs"
+    },
+    "qr_code": {
+      "type": "string",
+      "description": "QR code for asset"
+    },
+    "current_user": {
+      "type": "string",
+      "description": "Email of user who has checked out the asset"
+    },
+    "checkout_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when asset was checked out"
+    },
+    "expected_return_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Expected return date"
+    },
+    "custom_fields": {
+      "type": "object",
+      "description": "Custom fields specific to category"
+    }
+  },
+  "required": [
+    "name",
+    "asset_id"
+  ]
+}

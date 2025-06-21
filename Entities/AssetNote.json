@@ -1,0 +1,28 @@
+{
+  "name": "AssetNote",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "description": "Reference to the asset"
+    },
+    "note": {
+      "type": "string",
+      "description": "The content of the note"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who created the note"
+    },
+    "user_full_name": {
+      "type": "string",
+      "description": "Full name of the user for display"
+    }
+  },
+  "required": [
+    "asset_id",
+    "note",
+    "user_email",
+    "user_full_name"
+  ]
+}

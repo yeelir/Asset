@@ -1,0 +1,30 @@
+{
+  "name": "Location",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Location name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Location description"
+    },
+    "address": {
+      "type": "string",
+      "description": "Physical address"
+    },
+    "color": {
+      "type": "string",
+      "description": "Location color for UI",
+      "default": "#888888"
+    },
+    "parent_location_id": {
+      "type": "string",
+      "description": "Reference to a parent location for creating hierarchies."
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

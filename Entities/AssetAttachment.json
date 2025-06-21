@@ -1,0 +1,37 @@
+{
+  "name": "AssetAttachment",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "description": "Reference to the asset"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded file"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original name of the file"
+    },
+    "file_type": {
+      "type": "string",
+      "description": "MIME type of the file"
+    },
+    "uploaded_by_email": {
+      "type": "string",
+      "description": "Email of the user who uploaded the file"
+    },
+    "uploaded_by_full_name": {
+      "type": "string",
+      "description": "Full name of the uploader"
+    }
+  },
+  "required": [
+    "asset_id",
+    "file_url",
+    "file_name",
+    "uploaded_by_email",
+    "uploaded_by_full_name"
+  ]
+}

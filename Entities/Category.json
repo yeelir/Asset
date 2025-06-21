@@ -1,0 +1,26 @@
+{
+  "name": "Category",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Category name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Category description"
+    },
+    "color": {
+      "type": "string",
+      "description": "Category color for UI",
+      "default": "#888888"
+    },
+    "parent_category_id": {
+      "type": "string",
+      "description": "Reference to a parent category for hierarchies."
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
